@@ -3144,3 +3144,249 @@ select {
     padding-top: 10px;
   }
 }
+
+.situation__box {
+  background: var(--lavender-blush);
+  padding: 40px 30px 40px 20px;
+  border-radius: 30px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+  grid-template-columns: auto 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 20px;
+  gap: 10px;
+  position: relative;
+  isolation: isolate;
+}
+.situation__box:nth-child(even) {
+  background: var(--light-amber);
+}
+@media (max-width: 1320px) {
+  .situation__box {
+    padding: 30px 10px;
+  }
+}
+@media (max-width: 992px) {
+  .situation__box {
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 772px) {
+  .situation__box {
+    padding: 20px 15px;
+  }
+}
+@media (max-width: 480px) {
+  .situation__box {
+    padding: 20px 15px;
+  }
+}
+
+.situation__box-svg {
+  position: absolute;
+  left: 50%;
+  top: -60px;
+  z-index: -1;
+  width: 100%;
+  height: auto;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.situation__box-svg path {
+  stroke: var(--white);
+  fill: var(--light-amber);
+}
+@media (max-width: 1400px) {
+  .situation__box-svg {
+    top: -45px;
+  }
+}
+@media (max-width: 1200px) {
+  .situation__box-svg {
+    top: -30px;
+  }
+}
+
+.situation__box-svg-add {
+  z-index: 1;
+  background: none !important;
+  padding-left: 70px;
+}
+@media (max-width: 1400px) {
+  .situation__box-svg-add {
+    padding-left: 50px;
+  }
+}
+@media (max-width: 1200px) {
+  .situation__box-svg-add {
+    padding-left: 40px;
+  }
+}
+@media (max-width: 772px) {
+  .situation__box-svg-add {
+    padding-left: 15px;
+  }
+}
+
+.situation__wrapp {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding-top: 50px;
+}
+@media (max-width: 1320px) {
+  .situation__wrapp {
+    gap: 10px 30px;
+    padding-top: 40px;
+  }
+}
+@media (max-width: 992px) {
+  .situation__wrapp {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-top: 30px;
+  }
+}
+@media (max-width: 772px) {
+  .situation__wrapp {
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+    gap: 10px;
+  }
+}
+
+.situation {
+  padding-top: 120px;
+  padding-bottom: 70px;
+}
+@media (max-width: 1320px) {
+  .situation {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+}
+@media (max-width: 992px) {
+  .situation {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+}
+@media (max-width: 772px) {
+  .situation {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.situation-box-title {
+  font-family: "Comfortaa";
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 100%;
+  color: var(--white);
+  opacity: 0.8;
+}
+@media (max-width: 1320px) {
+  .situation-box-title {
+    font-size: 90px;
+  }
+}
+@media (max-width: 772px) {
+  .situation-box-title {
+    font-size: 70px;
+  }
+}
+@media (max-width: 480px) {
+  .situation-box-title {
+    font-size: 60px;
+  }
+}
+
+.situation-box-text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+}
+@media (max-width: 1320px) {
+  .situation-box-text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.situation__box-table,
+.situation__box-moble,
+.situation__box-subdesc {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  .situation__box-subdesc {
+    display: block;
+    top: -50px;
+  }
+  .situation__box-desc {
+    display: none;
+  }
+}
+@media (max-width: 772px) {
+  .situation__box-subdesc {
+    display: none;
+  }
+  .situation__box-table {
+    width: 105%;
+    display: block;
+    top: -40px;
+  }
+}
+@media (max-width: 380px) {
+  .situation__box-table {
+    display: none;
+  }
+  .situation__box-moble {
+    display: block;
+    width: 105%;
+    top: -40px;
+  }
+}
+.situation-title {
+  font-family: "Comfortaa";
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+}
+@media (max-width: 1320px) {
+  .situation-title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 992px) {
+  .situation-title {
+    max-width: 570px;
+  }
+}
+@media (max-width: 772px) {
+  .situation-title {
+    max-width: 470px;
+    text-align: center;
+    font-size: 36px;
+    line-height: 36px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 480px) {
+  .situation-title {
+    font-size: 24px;
+    line-height: 24px;
+    max-width: 270px;
+  }
+}
