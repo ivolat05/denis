@@ -333,4 +333,31 @@ const teamSwiper = () => {
 };
 teamSwiper();
 
+const reviewsSwiper = () => {
+	const reviewsWrapper = document.querySelector(".reviews__swiper");
+	const installSwiper = {
+		spaceBetween: 40,
+		slidesPerView: 3,
+		watchSlidesProgress: true,
+		breakpoints: {
+			320: { slidesPerView: 1 },
+			772: { slidesPerView: 2 },
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			1400: { slidesPerView: 3, spaceBetween: 40 },
+		},
+		navigation: {
+			nextEl: ".reviews__btn-next",
+			prevEl: ".reviews__btn-prev",
+		},
+	};
+	if (reviewsWrapper) {
+		const swiperReviews = new Swiper(reviewsWrapper, installSwiper);
+	}
+};
+
+reviewsSwiper();
+
 
