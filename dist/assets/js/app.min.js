@@ -309,4 +309,28 @@ const menu = () => {
 };
 menu();
 
+const teamSwiper = () => {
+	const teamWrapper = document.querySelector(".team__swiper");
+	const installSwiper = {
+		spaceBetween: 20,
+		slidesPerView: 3,
+		loop: true,
+		breakpoints: {
+			320: { slidesPerView: 1 },
+			450: { slidesPerView: 2 },
+			772: {
+				slidesPerView: 3,
+			},
+		},
+		navigation: {
+			nextEl: ".team__btn-next",
+			prevEl: ".team__btn-prev",
+		},
+	};
+	if (teamWrapper) {
+		const swiperTeam = new Swiper(teamWrapper, installSwiper);
+	}
+};
+teamSwiper();
+
 
