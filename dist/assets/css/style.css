@@ -2000,6 +2000,7 @@ iframe.wait-autoplay {
   --dark-cerulean-blue: #003158;
   --electric-indigo-opacity-4: rgba(97, 0, 220, .4);
   --modal-back: rgba(0, 0, 0, 0.7);
+  --black-04: rgba(0, 0, 0, .4);
 }
 
 *,
@@ -2387,6 +2388,8 @@ select {
   -webkit-animation-duration: 0.7s;
           animation-duration: 0.7s;
   z-index: 5;
+  -webkit-box-shadow: 5px 5px 20px var(--black-04);
+          box-shadow: 5px 5px 20px var(--black-04);
 }
 
 @-webkit-keyframes show__header {
