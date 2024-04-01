@@ -1999,6 +1999,7 @@ iframe.wait-autoplay {
   --blue: #3EA9FF;
   --dark-cerulean-blue: #003158;
   --electric-indigo-opacity-4: rgba(97, 0, 220, .4);
+  --electric-yellow-opacity-4: rgba(255, 205, 41, .5);
   --modal-back: rgba(0, 0, 0, 0.7);
   --black-04: rgba(0, 0, 0, .4);
 }
@@ -2074,6 +2075,13 @@ select {
   transition: 0.4s;
 }
 
+.btn-hover-yellow {
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
 .title {
   font-family: "Comfortaa";
   font-weight: 700;
@@ -2143,8 +2151,13 @@ select {
           justify-content: flex-end;
 }
 
-.--stop {
+.--stop,
+.--stop-modal {
   overflow: hidden;
+}
+
+.style--wrapper {
+  display: none;
 }
 
 .modal-background {
@@ -2321,6 +2334,7 @@ select {
   background: var(--whtie);
   padding-top: 20px;
   padding-bottom: 20px;
+  margin-top: 80px;
 }
 
 .header__nav.--active {
@@ -2376,44 +2390,22 @@ select {
   height: 100%;
 }
 
-.header-fixed {
+.header__top {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  padding-left: 20px;
-  padding-right: 20px;
-  -webkit-animation-name: show__header;
-          animation-name: show__header;
-  -webkit-animation-duration: 0.7s;
-          animation-duration: 0.7s;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
   z-index: 5;
+  -webkit-box-shadow: 0 0 0 var(--black-04);
+          box-shadow: 0 0 0 var(--black-04);
+}
+
+.header-fixed {
   -webkit-box-shadow: 5px 5px 20px var(--black-04);
           box-shadow: 5px 5px 20px var(--black-04);
-}
-
-@-webkit-keyframes show__header {
-  0% {
-    opacity: 0;
-    top: -80px;
-  }
-
-  100% {
-    opacity: 1;
-    top: 0;
-  }
-}
-
-@keyframes show__header {
-  0% {
-    opacity: 0;
-    top: -80px;
-  }
-
-  100% {
-    opacity: 1;
-    top: 0;
-  }
 }
 
 .main {
@@ -2421,7 +2413,6 @@ select {
   padding-bottom: 33px;
   position: relative;
   isolation: isolate;
-  overflow: hidden;
 }
 
 .main-svg-fon {
@@ -3662,8 +3653,8 @@ select {
   grid-area: team__team-row;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 340px calc(100% - 340px);
-  grid-template-columns: 340px calc(100% - 340px);
+  -ms-grid-columns: 340px calc(100% - 400px);
+  grid-template-columns: 340px calc(100% - 400px);
   gap: 60px;
 }
 
@@ -4472,8 +4463,8 @@ select {
   }
 
   .team__team-row {
-    -ms-grid-columns: 300px calc(100% - 300px);
-    grid-template-columns: 300px calc(100% - 300px);
+    -ms-grid-columns: 300px calc(100% - 320px);
+    grid-template-columns: 300px calc(100% - 320px);
     gap: 20px;
   }
 
@@ -4940,6 +4931,7 @@ select {
   .header__nav {
     padding-top: 16px;
     padding-bottom: 16px;
+    margin-top: 68px;
   }
 
   .header__nav-list {
@@ -5001,6 +4993,7 @@ select {
   }
 
   .header__nav {
+    margin-top: 0;
     padding-top: 0;
     padding-bottom: 0;
     -webkit-transition: 0.4s;
@@ -5044,6 +5037,7 @@ select {
 
   .main {
     padding-bottom: 88px;
+    padding-top: 60px;
   }
 
   .main-img {
@@ -5825,7 +5819,7 @@ select {
   }
 
   .stages-row {
-    padding-right: 0;
+    padding-right: 12px;
   }
 
   .stages__box-img {
@@ -6275,6 +6269,10 @@ select {
 
   .header__nav-link {
     font-weight: 600;
+  }
+
+  .main {
+    padding-top: 70px;
   }
 }
 
@@ -6829,6 +6827,11 @@ select {
             box-shadow: 0px 5px 30px var(--electric-indigo-opacity-4);
   }
 
+  .btn-hover-yellow:hover {
+    -webkit-box-shadow: 0px 5px 30px var(--electric-yellow-opacity-4);
+            box-shadow: 0px 5px 30px var(--electric-yellow-opacity-4);
+  }
+
   .btn-swiper:hover {
     background: var(--electric-indigo);
   }
@@ -6850,8 +6853,13 @@ select {
 
 @media (hover: none) {
   .btn-hover:active {
-    -webkit-box-shadow: 5px 5px 40px var(--electric-indigo-opacity-6);
-            box-shadow: 5px 5px 40px var(--electric-indigo-opacity-6);
+    -webkit-box-shadow: 5px 5px 40px var(--electric-indigo-opacity-4);
+            box-shadow: 5px 5px 40px var(--electric-indigo-opacity-4);
+  }
+
+  .btn-hover-yellow:active {
+    -webkit-box-shadow: 5px 5px 40px var(--electric-yellow-opacity-4);
+            box-shadow: 5px 5px 40px var(--electric-yellow-opacity-4);
   }
 
   .btn-swiper:active {
